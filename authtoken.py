@@ -1,1 +1,1 @@
-auth_token = "Your api key"
+auth_token = "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"

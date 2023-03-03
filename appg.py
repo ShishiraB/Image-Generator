@@ -19,8 +19,8 @@ text.place(x=10, y=10)
 imain = ctk.CTkLabel(app, height=512, width=512)
 imain.place(x=10, y=100)
 model = "CompVis/stable-diffusion-v1-4"
-dev = "cpu"
-pipe = StableDiffusionPipeline.from_pretrained(model, revision=None, torch_dtype=torch.float64, use_auth_token=auth_token)
+dev = "cuda"
+pipe = StableDiffusionPipeline.from_pretrained(model, revision='fp16', torch_dtype=torch.float16, use_auth_token=auth_token)
 pipe.to(dev)
 
 def gen():
