@@ -1,1 +1,1 @@
-pip install transformers Pillow torch customtkinter diffusers
+pip install transformers Pillow torch customtkinter diffusers accelerate
