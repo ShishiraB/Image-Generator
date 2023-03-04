@@ -1,2 +1,3 @@
 python -m venv Nocie
+Nocie\Scripts\activate.bat 
 pip install transformers Pillow torch customtkinter diffusers accelerate
