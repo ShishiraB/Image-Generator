@@ -2,7 +2,7 @@ import tkinter as tk
 import customtkinter as ctk
 
 from PIL import ImageTk
-from authtoken import auth_token
+from auth.authtoken import auth_token
 
 import torch
 from torch import autocast
@@ -26,6 +26,7 @@ dev = "cpu"
 pipe = StableDiffusionPipeline.from_pretrained(model, revision=None, torch_dtype=torch.float64, use_auth_token=auth_token)
 pipe.to(dev)
 
+#Image Generation
 def gen():
     with autocast(dev):
         image = pipe(text.get(), guidance_scale=8.5)["sample"][0]
