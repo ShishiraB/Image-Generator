@@ -19,7 +19,7 @@ text.place(x=10, y=10)
 imain = ctk.CTkLabel(app, height=512, width=512)
 imain.place(x=10, y=100)
 model = "CompVis/stable-diffusion-v1-4"
-dev = "cuda" if torch.cuda.is_available() else "cpu"
+dev = "cpu"
 pipe = StableDiffusionPipeline.from_pretrained(model, revision=None, torch_dtype=torch.float64, use_auth_token=auth_token)
 pipe.to(dev)
 
