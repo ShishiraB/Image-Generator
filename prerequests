@@ -1,1 +1,2 @@
+python -m venv Nocie
 pip install transformers Pillow torch customtkinter diffusers accelerate
