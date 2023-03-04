@@ -19,7 +19,7 @@ text.place(x=10, y=10)
 #Image Generation
 def gen():
     with autocast(dev):
-        image = pipe(text.get(), guidance_scale=8.5)["sample"][0]
+        image = pipe(text.get(), guidance_scale=8.5)["samples"][0]
     image.save('output.png')
     img = ImageTk.PhotoImage(image)
     imain.configure(image=img)
