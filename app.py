@@ -12,9 +12,12 @@ from diffusers import StableDiffusionPipeline
 app = tk.Tk()
 app.geometry("800x600")
 app.title("Image Generator")
-ctk.set_appearance_mode("light")
+ctk.set_appearance_mode("dark")
+
+#Textfield
 text = ctk.CTkEntry(app, height=40, width=780, font=("Roboto", 20), text_color="black", fg_color="white")
 text.place(x=10, y=10)
+
 
 #Image Generation
 def gen():
@@ -28,9 +31,12 @@ def gen():
 trig = ctk.CTkButton(app, height=40, width=350,font=("Roboto", 20), text_color="white", fg_color="orange", command=gen)
 trig.configure(text="Create")
 trig.place(x=206, y=60)
-imain = ctk.CTkLabel(app, height=500, width=500)
-imain.place(x=50, y=100)
 
+#image window
+imain = ctk.CTkLabel(app, height=512, width=512)
+imain.place(x=10, y=110)
+
+#Piplining throughModel
 model = "CompVis/stable-diffusion-v1-4"
 dev = "cpu"
 pipe = StableDiffusionPipeline.from_pretrained(model, revision=None, torch_dtype=torch.float64, use_auth_token=auth_token)
