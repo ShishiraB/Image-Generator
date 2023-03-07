@@ -1,4 +1,3 @@
 python -m venv Noice
 .\Noice\Scripts\activate.bat
-.\Noice\Scripts\python.exe -m pip install transformers Pillow customtkinter diffusers accelerate
-.\Noice\Scripts\python.exe -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+.\Noice\Scripts\python.exe -m pip install transformers torch Pillow customtkinter diffusers accelerate
