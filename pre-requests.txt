@@ -1,3 +1,13 @@
+In Windows
+
 python -m venv Noice
 .\Noice\Scripts\activate.bat
 .\Noice\Scripts\python.exe -m pip install transformers torch Pillow customtkinter diffusers accelerate
+
+
+For Linux and Mac
+
+apt-get install python3-venv
+python3 -m venv Noice
+./Noice/bin/activate
+./Noice/bin/python3 -m pip install transformers torch Pillow customtkinter diffusers accelerate
